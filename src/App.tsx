@@ -2,6 +2,7 @@ import { Linkedin, FileUser, Github } from 'lucide-react';
 import { CardTecnology } from './components/cardTecnology';
 import CardExperience from './components/cardExperience';
 import GalaxyHero from './components/galaxyHero';
+import { FeaturedProject, FeaturedProjectRight } from './components/projects';
 
 export default function App() {
   return (
@@ -47,7 +48,7 @@ export default function App() {
           </p>
         </section>
         <section className="w-full flex flex-col mt-50 gap-6">
-          <span className="text-4xl text-start">Experiencia</span>
+          <span className="text-4xl text-start">Experiencia Profesional</span>
           <div className='relative flex w-full h-full flex-col gap-6'>
             <div className="absolute inset-0 rounded-full 
                             bg-blue-700 blur-3xl opacity-70 
@@ -70,8 +71,16 @@ código. '/>
 
 
         <section className="w-full flex flex-col mt-50 gap-6">
+          <div className='w-full flex justify-center'>
+            <p className='flex text-4xl font-bold text-center'>Tecnologías</p>
+          </div>
           <GalaxyHero />
+        </section>
 
+        <section className="w-full flex flex-col gap-40 mt-20">
+          <FeaturedProject title='Proyecto Personal' title2='Landing Page Karate' description='Este proyecto es un sitio web informativo sobre un dojo de Karate, diseñado para proporcionar detalles sobre el dojo, inscripciones, torneos y más. Está desarrollado utilizando Next.js 14 con React 18.' imgUrl='/projects/proyectoKarate.webp' />
+          <FeaturedProjectRight title='Proyecto Personal' title2='Clon de YouTube Music' description='He desarrollado una aplicación clon de YouTube Music utilizando React y TypeScript, con el entorno de desarrollo Vite. La aplicación está conectada a una API de Podcasts para obtener los audios.' imgUrl='/projects/ProyectoYTMusic.webp' />
+          <FeaturedProject title='Freelance' title2='Landing Page Karate' description='Este proyecto es un sitio web informativo sobre un dojo de Karate, diseñado para proporcionar detalles sobre el dojo, inscripciones, torneos y más. Está desarrollado utilizando Next.js 14 con React 18.' imgUrl='/projects/ProyectoPasarelaPago.webp' />
         </section>
 
       </div >
