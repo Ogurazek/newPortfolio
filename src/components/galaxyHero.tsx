@@ -3,8 +3,7 @@ export default function GalaxyHero() {
 
     return (
         <div className="relative flex flex-col items-center justify-center bg-gradient-to-b text-white overflow-hidden">
-            {/* Imagen central */}
-            <div className="relative z-10 flex h-32 mt-80 w-32 sm:h-48 sm:w-48 items-center justify-center rounded-full bg-blue-800 shadow-[0_0_60px_20px_rgba(59,130,246,0.5)]">
+            <div className="relative z-10 flex h-40 mt-80 w-40 sm:h-48 sm:w-48 items-center justify-center rounded-full bg-blue-800 shadow-[0_0_60px_20px_rgba(59,130,246,0.5)]">
                 <img className="object-contain w-32 h-32" src="/FotoSecondProfile.png" alt="" />
             </div>
 
@@ -36,7 +35,7 @@ export default function GalaxyHero() {
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {icons.map((_, i) => {
-                    const offset = (i - (icons.length - 1) / 2) * 10;
+                    const offset = (i - (icons.length - 1) / 2) * 11;
                     return (
                         <line
                             key={i}

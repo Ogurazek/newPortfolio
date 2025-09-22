@@ -3,38 +3,37 @@ import { CardTecnology } from './components/cardTecnology';
 import CardExperience from './components/cardExperience';
 import GalaxyHero from './components/galaxyHero';
 import { FeaturedProject, FeaturedProjectRight } from './components/projects';
+import ContactForm from './components/contact';
 
 export default function App() {
   return (
     <>
-      <div className="relative w-[1000px] mb-20">
-        <section className="w-full flex flex-col items-center justify-center md:flex-row">
+      <div className="relative max-w-[62.5rem] mx-auto mb-20">
+        <section className="w-full flex flex-col items-center justify-center md:flex-row gap-6">
           <div className="relative w-64 flex items-center justify-center">
             <div className="absolute inset-0 rounded-full 
-                            bg-blue-700 blur-3xl opacity-70 
-                            w-[250px] h-[250px] mx-auto"></div>
-
-            <img className="relative z-10" src="/FotoProfile.png" alt="" />
+                    bg-blue-700 blur-3xl opacity-70 
+                    w-[250px] h-[250px] mx-auto"></div>
+            <img className="relative z-10" src="/FotoProfile.png" alt="Perez Elías" />
           </div>
 
-          <div className="flex flex-col gap-6 ml-10">
-            <div className="flex text-lg">
+          <div className="flex flex-col gap-6 ml-0 md:ml-10 text-center md:text-left">
+            <div className="flex text-lg justify-center md:justify-start">
               <p>Hola! Soy</p>
               <p className="text-blue-400">&nbsp;Elías Perez👋</p>
             </div>
             <div>
               <span className="text-yellow-400">Un desarrollador frontend</span>
               <h1 className="text-4xl font-bold leading-snug">
-                que juzga la app por <br /> su primera carga...
+                que habla en CSS y  <br /> sueña en JavaScript...
               </h1>
-              {/* <span className="text-[10px]">porque la rapidez y claridad al iniciar la app refleja la calidad del producto</span> */}
             </div>
           </div>
         </section>
         <div className='w-full flex justify-center gap-8 mt-12'>
-          <CardTecnology url='https://www.linkedin.com/in/elias-perez-frontend/' Icon={Linkedin} />
-          <CardTecnology url='https://www.linkedin.com/in/elias-perez-frontend/' Icon={FileUser} />
-          <CardTecnology url='https://www.linkedin.com/in/elias-perez-frontend/' Icon={Github} />
+          <CardTecnology url='https://www.linkedin.com/in/perezelias/' Icon={Linkedin} />
+          <CardTecnology url='https://drive.google.com/file/d/1e5tBy86kUXlLrYExCsek0c6JAS9bgtlr/view?usp=sharing' Icon={FileUser} />
+          <CardTecnology url='https://github.com/Ogurazek' Icon={Github} />
         </div>
 
 
@@ -43,44 +42,66 @@ export default function App() {
         <section className="w-full flex flex-col mt-30 gap-2 p-6 rounded-lg">
           <p className='flex text-4xl font-bold'>Sobre mí</p>
           <p>
-            Soy Desarrollador Front-End con experiencia en proyectos reales, donde trabajé con tecnologías como React, Next.js, TailwindCSS, TypeScript y Shadcn UI. Me apasiona construir interfaces modernas, accesibles y centradas en el usuario, siempre cuidando la calidad y la escalabilidad del código.
+            Soy Desarrollador Front-End con experiencia en React, Next.js, TailwindCSS, TypeScript. Me apasiona construir interfaces modernas, accesibles y centradas en el usuario, siempre cuidando la calidad y la escalabilidad del código.
+
+            Actualmente busco nuevas oportunidades que me permitan seguir creciendo profesionalmente, aportar valor en equipos dinámicos y enfrentar desafíos que potencien mis habilidades como desarrollador.
+
+
 
           </p>
         </section>
-        <section className="w-full flex flex-col mt-50 gap-6">
+        <div id='experiencia'></div>
+        <section className="w-full flex flex-col mt-50 gap-6 p-6 md:p-4 lg:p-0">
           <span className="text-4xl text-start">Experiencia Profesional</span>
           <div className='relative flex w-full h-full flex-col gap-6'>
             <div className="absolute inset-0 rounded-full 
                             bg-blue-700 blur-3xl opacity-70 
-                            w-[500px] h-[500px] mx-auto"></div>
-            <CardExperience date='04/2025' title='Mentor en el Informatorio Chaco' description='Me desempeño como mentor en un curso de desarrollo donde acompaño a los estudiantes en su formación en programación. Brindo soporte en temas como Python, Django, Tkinter, MySQL, entre otros.
-Además, dicto clases prácticas y estoy disponible para resolver dudas, guiarlos en sus proyectos y ayudarlos a aplicar lo aprendido de forma real y efectiva. Mi enfoque es facilitar el aprendizaje y motivar a cada estudiante a desarrollar su potencial como desarrollador/a.'/>
-            <CardExperience date='04/2025' title='Desarrollador Frontend en Clidox' description='Formo parte de un equipo freelance multidisciplinario en el que desarrollamos Clidox, una
-aplicación web que conecta a médicos y pacientes de manera ágil y eficiente.
-Mi rol consiste en implementar componentes reutilizables y flujos interactivos con Next.js,
-TypeScript, TailwindCSS y Shadcn UI, asegurando una navegación moderna, accesible e
-intuitiva. Trabajo estrechamente con el equipo backend en la integración de APIs REST,
-utilizando herramientas como SWR para manejo de datos, react-hook-form y zod para
-validación de formularios, con foco en accesibilidad, performance y mantenibilidad del
-código. '/>
-          </div>
+                            max-w-[500px] h-[500px] mx-auto"></div>
+            <CardExperience date='04/2025' title='Mentor en el Informatorio Chaco' description='Me desempeño como mentor en un curso de desarrollo de software, donde acompaño a más de 100 estudiantes en su formación en programación. Brindo soporte en tecnologías como Python, Django, Tkinter y MySQL, fomentando tanto el aprendizaje teórico como la práctica.
 
+Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desarrollo de sus proyectos, ayudándolos a aplicar lo aprendido en situaciones reales. Mi enfoque está en motivar, inspirar y potenciar las habilidades de cada estudiante para que logren crecer como desarrolladores/as y adquieran confianza en su camino profesional.'/>
+            <CardExperience date='09/2024' title='Desarrollador Frontend en Clidox' description='Durante mi experiencia, participé en el desarrollo y mantenimiento de una plataforma de gestión médica, abordando la implementación de mejoras generales, resolución de errores y creación de nuevas funcionalidades orientadas a optimizar la experiencia de pacientes, médicos, secretarias y administradores. Entre mis tareas principales se incluyeron el desarrollo de módulos de gestión de turnos médicos con ABM desde calendario, edición, arrastrar y eliminación de turnos, así como la gestión de disponibilidad por rangos de fechas. La creación y administración de consultorios, integrando doctores y configurando horarios. La extensión de funcionalidades en perfiles y registros de usuarios. La implementación de landing pages y navegación contextual entre perfiles. La incorporación de mejoras en cuestionarios y gestión de pacientes archivados. El diseño de sidebars personalizados según rol con vistas adaptadas. Optimización de la UI/UX mediante responsive design bajo enfoque mobile first, tooltips, mensajes contextuales y mejoras visuales en listados, cards, y la integración de endpoints para consultorios, doctores y horarios, asegurando la correcta comunicación con la API.' />
+          </div>
 
         </section>
 
-
-
-        <section className="w-full flex flex-col mt-50 gap-6">
+        <section id='tecnologias' className="w-full flex flex-col mt-50 gap-6 scroll-mt-24">
           <div className='w-full flex justify-center'>
             <p className='flex text-4xl font-bold text-center'>Tecnologías</p>
           </div>
           <GalaxyHero />
         </section>
 
-        <section className="w-full flex flex-col gap-40 mt-20">
-          <FeaturedProject title='Proyecto Personal' title2='Landing Page Karate' description='Este proyecto es un sitio web informativo sobre un dojo de Karate, diseñado para proporcionar detalles sobre el dojo, inscripciones, torneos y más. Está desarrollado utilizando Next.js 14 con React 18.' imgUrl='/projects/proyectoKarate.webp' />
-          <FeaturedProjectRight title='Proyecto Personal' title2='Clon de YouTube Music' description='He desarrollado una aplicación clon de YouTube Music utilizando React y TypeScript, con el entorno de desarrollo Vite. La aplicación está conectada a una API de Podcasts para obtener los audios.' imgUrl='/projects/ProyectoYTMusic.webp' />
-          <FeaturedProject title='Freelance' title2='Landing Page Karate' description='Este proyecto es un sitio web informativo sobre un dojo de Karate, diseñado para proporcionar detalles sobre el dojo, inscripciones, torneos y más. Está desarrollado utilizando Next.js 14 con React 18.' imgUrl='/projects/ProyectoPasarelaPago.webp' />
+        <section className="w-full flex flex-col md:gap-20 mt-50">
+          <span id='proyectos' className="text-4xl text-center">Proyectos</span>
+          <FeaturedProject title='Freelance' title2='Clidox' description='Clidox es una plataforma de gestión médica que optimiza la experiencia de pacientes, médicos y personal administrativo. Participo en su desarrollo como freelance, implementando mejoras, nuevas funcionalidades y resolviendo problemas técnicos para asegurar un flujo eficiente de turnos y administración de consultas.' imgUrl='/projects/clidox.png'
+            urlIcons={[
+              { src: "/nextjsss.png", alt: "Next.js" },
+              { src: "/tailwindcss2.svg", alt: "Tailwind CSS" },
+              { src: "/typescript.svg", alt: "TypeScript" },
+            ]}
+          />
+          <div className='"w-full flex flex-col md:gap-20'>
+            <FeaturedProjectRight title='Freelance' title2='Landing Page Karate' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
+              urlIcons={[
+                { src: "/nextjsss.png", alt: "Next.js" },
+                { src: "/css.svg", alt: "Tailwind CSS" },
+                { src: "/typescript.svg", alt: "TypeScript" },
+              ]} />
+            <FeaturedProject title='Proyecto Personal' title2='Pokedex' description='Desarrollé una Pokedex interactiva como proyecto personal, que permite a los usuarios explorar todos los Pokémon, filtrarlos, buscarlos y consultar detalles específicos de cada uno. La aplicación se conecta a la PokeApi para mostrar información actualizada y ofrece una experiencia dinámica y amigable para el usuario.' imgUrl='/projects/ProyectoPokedex.webp'
+              urlIcons={[
+                { src: "/React.svg", alt: "React" },
+                { src: "/css.svg", alt: "CSS" },
+                { src: "/typescript.svg", alt: "TypeScript" },
+              ]} />
+          </div>
+        </section>
+
+        <section id='contacto' className="w-full flex flex-col mt-30 gap-6 py-20">
+          <div className='w-full flex justify-center'>
+            <p className='flex text-4xl font-bold text-center'>Contacto</p>
+          </div>
+          <ContactForm />
         </section>
 
       </div >
