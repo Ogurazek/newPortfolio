@@ -80,7 +80,7 @@ Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desar
               { src: "/tailwindcss2.svg", alt: "Tailwind CSS" },
               { src: "/typescript.svg", alt: "TypeScript" },
             ]}
-            linkProject='www.clidox.com'
+            linkProject='https://clidox.com'
           />
           <div className='"w-full flex flex-col md:gap-20'>
             <FeaturedProjectRight title='Freelance' title2='Landing Page Karate' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
