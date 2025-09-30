@@ -32,7 +32,7 @@ export default function App() {
         </section>
         <div className='w-full flex justify-center gap-8 mt-12'>
           <CardTecnology url='https://www.linkedin.com/in/perezelias/' Icon={Linkedin} />
-          <CardTecnology url='https://drive.google.com/file/d/1e5tBy86kUXlLrYExCsek0c6JAS9bgtlr/view?usp=sharing' Icon={FileUser} />
+          <CardTecnology url='https://drive.google.com/file/d/144ShqsvY3LImXucNky7XhY5wfmNfL09R/view?usp=sharing' Icon={FileUser} />
           <CardTecnology url='https://github.com/Ogurazek' Icon={Github} />
         </div>
 
@@ -80,6 +80,7 @@ Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desar
               { src: "/tailwindcss2.svg", alt: "Tailwind CSS" },
               { src: "/typescript.svg", alt: "TypeScript" },
             ]}
+            linkProject='www.clidox.com'
           />
           <div className='"w-full flex flex-col md:gap-20'>
             <FeaturedProjectRight title='Freelance' title2='Landing Page Karate' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
@@ -87,13 +88,17 @@ Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desar
                 { src: "/nextjsss.png", alt: "Next.js" },
                 { src: "/css.svg", alt: "Tailwind CSS" },
                 { src: "/typescript.svg", alt: "TypeScript" },
-              ]} />
+              ]}
+              linkProject='https://page-karate.vercel.app'
+            />
             <FeaturedProject title='Proyecto Personal' title2='Pokedex' description='Desarrollé una Pokedex interactiva como proyecto personal, que permite a los usuarios explorar todos los Pokémon, filtrarlos, buscarlos y consultar detalles específicos de cada uno. La aplicación se conecta a la PokeApi para mostrar información actualizada y ofrece una experiencia dinámica y amigable para el usuario.' imgUrl='/projects/ProyectoPokedex.webp'
               urlIcons={[
                 { src: "/React.svg", alt: "React" },
                 { src: "/css.svg", alt: "CSS" },
                 { src: "/typescript.svg", alt: "TypeScript" },
-              ]} />
+              ]}
+              linkProject='https://poke-api-xi-five.vercel.app'
+            />
           </div>
         </section>
 
