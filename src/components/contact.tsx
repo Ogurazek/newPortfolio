@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-export default function ContactForm() {
+function ContactFormInner() {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -10,6 +11,13 @@ export default function ContactForm() {
         phone: "",
         message: "",
     });
+
+    const [recaptchaReady, setRecaptchaReady] = useState(false);
+    const { executeRecaptcha } = useGoogleReCaptcha();
+
+    useEffect(() => {
+        if (executeRecaptcha) setRecaptchaReady(true);
+    }, [executeRecaptcha]);
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,14 +29,23 @@ export default function ContactForm() {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        if (!executeRecaptcha) {
+            toast.error("Recaptcha aún no cargado, intenta recargar la página");
+            return;
+        }
+
+        const token = await executeRecaptcha("contact_form");
+
+        const dataWithToken = { ...formData, recaptchaToken: token };
 
         toast.promise(
             emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
-                formData,
+                dataWithToken,
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string
             ),
             {
@@ -99,12 +116,27 @@ export default function ContactForm() {
 
                     <button
                         type="submit"
-                        className="bg-blue-400 text-black font-bold px-6 py-2 rounded-md hover:bg-blue-500 transition-colors"
+                        disabled={!recaptchaReady}
+                        className="bg-blue-400 text-black font-bold px-6 py-2 rounded-md hover:bg-blue-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         Enviar mensaje
                     </button>
+
+                    {!recaptchaReady && (
+                        <p className="text-xs text-gray-400 mt-1">
+                            Cargando protección reCAPTCHA...
+                        </p>
+                    )}
                 </form>
             </div>
         </div>
+    );
+}
+
+export default function ContactForm() {
+    return (
+        <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}>
+            <ContactFormInner />
+        </GoogleReCaptchaProvider>
     );
 }

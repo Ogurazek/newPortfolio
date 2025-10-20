@@ -91,13 +91,12 @@ Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desar
               ]}
               linkProject='https://page-karate.vercel.app'
             />
-            <FeaturedProject title='Proyecto Personal' title2='Pokedex' description='Desarrollé una Pokedex interactiva como proyecto personal, que permite a los usuarios explorar todos los Pokémon, filtrarlos, buscarlos y consultar detalles específicos de cada uno. La aplicación se conecta a la PokeApi para mostrar información actualizada y ofrece una experiencia dinámica y amigable para el usuario.' imgUrl='/projects/ProyectoPokedex.webp'
+            <FeaturedProject title='Proyecto Personal' title2='Pasarela de Pago' description='Desarrollé una pasarela de pago segura que permite a los usuarios ingresar y validar datos de tarjetas de crédito, incluyendo número de tarjeta y código de seguridad. Además, integré una API para mostrar dinámicamente el precio de productos en Bitcoin, ofreciendo una experiencia de pago moderna y flexible.' imgUrl='/projects/ProyectoPasarelaPago.webp'
               urlIcons={[
                 { src: "/React.svg", alt: "React" },
                 { src: "/css.svg", alt: "CSS" },
-                { src: "/typescript.svg", alt: "TypeScript" },
               ]}
-              linkProject='https://poke-api-xi-five.vercel.app'
+              linkProject='https://pasarelapago.vercel.app'
             />
           </div>
         </section>
