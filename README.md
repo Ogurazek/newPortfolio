@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# Portfolio Personal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un portfolio personal creado para mostrar información sobre mí, mis habilidades y los proyectos en los que he trabajado. Está desarrollado utilizando **React.js**, **TypeScript**, , **Tailwind** y el entorno de desarrollo **Vite**.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Secciones principales**:
 
-## Expanding the ESLint configuration
+  - **Sobre mí**: Una introducción personal y breve descripción.
+  - **Proyectos**: Una lista de los proyectos destacados en los que he trabajado, con enlaces y descripciones.
+  - **Skills**: Las principales tecnologías y herramientas que domino.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Diseño responsivo**: Adaptado para verse correctamente en diferentes dispositivos, desde teléfonos móviles, Tablets, hasta pantallas de escritorio.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Uso de iconos**: Implementación de iconos gracias a la librería **Lucide** para enriquecer el diseño visual.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tecnologías utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React.js**: Biblioteca principal para la construcción de la interfaz de usuario.
+- **TypeScript**: Para un desarrollo más robusto y con tipado estático.
+- **Vite**: Como entorno de desarrollo rápido y moderno.
+- **HTML y CSS(Module)**: Para la estructura y estilos personalizados del proyecto.
+- **Lucide**: Librería de iconos utilizados en diversas secciones.
+- **Vercel**: Plataforma utilizada para el despliegue del proyecto.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Link del Proyecto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Puedes ver el Portfolio aquí ---> https://eliasfolio.vercel.app
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+## Autor
+
+Creado por Perez Elías. Puedes encontrarme en:
+
+- [LinkedIn](https://www.linkedin.com/in/perezelias)
