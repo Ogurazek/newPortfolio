@@ -12,7 +12,7 @@ export default function Navbar() {
             <ul className="hidden md:flex space-x-8 fixed p-6 top-4 z-30 bg-gradient-to-r from-[#000b14]/10 to-[#000b14]/20
         backdrop-blur-md rounded-b-4xl">
                 <li>
-                    <a href="#experiencia" className="text-white hover:text-blue-400 font-medium  transition-all duration-300 ease-in-out">
+                    <a href="#inicio" className="text-white hover:text-blue-400 font-medium  transition-all duration-300 ease-in-out">
                         Inicio
                     </a>
                 </li>

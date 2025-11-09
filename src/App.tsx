@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
       <div className="relative max-w-[62.5rem] mx-auto mb-20">
-        <section className="w-full min-h-screen flex flex-col-reverse items-center justify-between md:flex-row gap-10 md:gap-6 px-4">
+        <section id='inicio' className="w-full min-h-screen flex flex-col-reverse items-center justify-between md:flex-row gap-10 md:gap-6 px-4">
           <div className="flex flex-col w-full md:w-auto p-4 sm:p-7 gap-6 text-center md:text-left">
             <div className="flex flex-col">
               <div className="flex justify-center md:justify-start flex-wrap">
