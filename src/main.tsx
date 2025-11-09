@@ -9,7 +9,7 @@ import { Toaster } from "sonner";
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Navbar />
-    <div className='flex justify-center relative items-center' style={{ fontFamily: "'Preahvihear', sans-serif" }}>
+    <div className='flex justify-center relative items-center bg-effect' style={{ fontFamily: "'Inter', sans-serif" }}>
       <App />
       <Toaster richColors position="top-right" />
     </div>

@@ -9,37 +9,55 @@ export default function App() {
   return (
     <>
       <div className="relative max-w-[62.5rem] mx-auto mb-20">
-        <section className="w-full flex flex-col items-center justify-center md:flex-row gap-6">
-          <div className="relative w-64 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full 
-                    bg-blue-700 blur-3xl opacity-70 
-                    w-[250px] h-[250px] mx-auto"></div>
-            <img className="relative z-10" src="/FotoProfile.png" alt="Perez Elías" />
+        <section className="w-full min-h-screen flex flex-col-reverse items-center justify-between md:flex-row gap-10 md:gap-6 px-4">
+          <div className="flex flex-col w-full md:w-auto p-4 sm:p-7 gap-6 text-center md:text-left">
+            <div className="flex flex-col">
+              <div className="flex justify-center md:justify-start flex-wrap">
+                <strong className="font-bold text-4xl sm:text-5xl py-1">Hola,</strong>
+                <strong className="font-bold text-4xl sm:text-5xl py-1 animated-text">&nbsp;soy Elías</strong>
+              </div>
+              <span className="font-bold animated-text-gray text-lg sm:text-xl">
+                Desarrollador FrontEnd
+              </span>
+            </div>
+
+            <div>
+              <p className="text-base font-medium sm:text-lg">
+                Construyo interfaces rápidas, accesibles y escalables. Me gusta trabajar con buenas prácticas, optimización y un diseño consistente. Siempre busco aportar soluciones claras a problemas reales.
+              </p>
+
+              <div className="w-full flex justify-center gap-6 sm:gap-8 mt-10 flex-wrap">
+                <CardTecnology title={"LinkedIn"} url="https://www.linkedin.com/in/perezelias/" Icon={Linkedin} />
+                <CardTecnology title={"Mi CV"} url="https://drive.google.com/file/d/144ShqsvY3LImXucNky7XhY5wfmNfL09R/view?usp=sharing" Icon={FileUser} />
+                <CardTecnology title={"Github"} url="https://github.com/Ogurazek" Icon={Github} />
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-6 ml-0 md:ml-10 text-center md:text-left">
-            <div className="flex text-lg justify-center md:justify-start">
-              <p>Hola! Soy</p>
-              <p className="text-blue-400">&nbsp;Elías Perez👋</p>
-            </div>
-            <div>
-              <span className="text-yellow-400">Un desarrollador frontend</span>
-              <h1 className="text-4xl font-bold leading-snug">
-                que habla en CSS y  <br /> sueña en JavaScript...
-              </h1>
-            </div>
+          <div
+            className="
+      relative mt-20 md:mt-0
+      w-[300px] sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[800px] 
+      h-auto md:h-[280px]
+      transition-all duration-500 
+      hover:-translate-y-3 hover:scale-[1.03] hover:shadow-2xl hover:shadow-black/50
+    "
+          >
+            <img
+              className="rounded-full w-full h-full object-cover relative z-10 p-1"
+              src="portfolioImage.png"
+              alt=""
+            />
+            <div className="absolute inset-0 rounded-full p-[4px] animated-border"></div>
           </div>
         </section>
-        <div className='w-full flex justify-center gap-8 mt-12'>
-          <CardTecnology url='https://www.linkedin.com/in/perezelias/' Icon={Linkedin} />
-          <CardTecnology url='https://drive.google.com/file/d/144ShqsvY3LImXucNky7XhY5wfmNfL09R/view?usp=sharing' Icon={FileUser} />
-          <CardTecnology url='https://github.com/Ogurazek' Icon={Github} />
-        </div>
 
 
 
 
-        <section className="w-full flex flex-col mt-30 gap-2 p-6 rounded-lg">
+
+
+        {/* <section className="w-full flex flex-col mt-30 gap-2 p-6 rounded-lg">
           <p className='flex text-4xl font-bold'>Sobre mí</p>
           <p>
             Soy Desarrollador Front-End con experiencia en React, Next.js, TailwindCSS, TypeScript. Me apasiona construir interfaces modernas, accesibles y centradas en el usuario, siempre cuidando la calidad y la escalabilidad del código.
@@ -49,7 +67,7 @@ export default function App() {
 
 
           </p>
-        </section>
+        </section> */}
         <div id='experiencia'></div>
         <section className="w-full flex flex-col mt-50 gap-6 p-6 md:p-4 lg:p-0">
           <span className="text-4xl text-start">Experiencia Profesional</span>

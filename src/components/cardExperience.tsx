@@ -17,7 +17,7 @@ export default function CardExperience({ description, title, date }: { descripti
             <div className="flex-1">
                 <h2 className="text-2xl font-bold">{title}</h2>
                 <span className="text-gray-200">{date}</span>
-                <p className="text-sm text-gray-300 mt-2 font-bold" style={{ fontFamily: "'Roboto'" }}>
+                <p className="text-sm text-gray-300 mt-2 font-bold">
                     {description}
                 </p>
             </div>

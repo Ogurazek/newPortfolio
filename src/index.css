@@ -3,7 +3,7 @@
 
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   background-color: #000b14;
@@ -15,3 +15,86 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.animated-border {
+   background: linear-gradient(
+    45deg,
+    #0055ff, 
+    #00eaff, 
+    #0099ff,  
+    #eeea0c,  
+    #0055ff  
+  );
+  background-size: 400% 400%;
+  animation: borderAnimation 6s ease infinite;
+  z-index: 0;
+  border-radius: 9999px;
+}
+
+@keyframes borderAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-text {
+  background: linear-gradient(
+    45deg,
+    #0055ff,
+    #00eaff,
+    #0099ff,
+    #6fd6ff,
+    #0055ff
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-text-gray {
+  background: linear-gradient(
+    10deg,
+    #ffffff,
+    #dcdcdc,
+    #838383,
+    #e6e6e6,
+    #838383
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-effect {
+  background: 
+    radial-gradient(
+      circle at 30% 40%,    
+      rgba(82, 81, 165, 0.12),  
+      rgba(0, 0, 0, 0) 70%        
+    ),
+    linear-gradient(
+      to bottom,
+      #000814,
+      #00020f
+    );
+}

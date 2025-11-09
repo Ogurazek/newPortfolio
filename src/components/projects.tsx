@@ -17,7 +17,6 @@ export function FeaturedProject({ title, title2, description, imgUrl, urlIcons, 
         <div
             className="relative flex flex-col md:flex-row items-center justify-between
       bg-gradient-to-br text-white shadow-lg gap-6 md:gap-8 p-6 min-h-[400px]"
-            style={{ fontFamily: "'Roboto'" }}
         >
             <div className="relative md:h-[341px] md:max-w-lg z-10 mb-4 md:mb-0 text-center md:text-left">
                 <h3 className="text-blue-400 font-semibold text-sm">{title}</h3>
@@ -57,7 +56,6 @@ export function FeaturedProjectRight({ title, title2, description, imgUrl, urlIc
         <div
             className="relative flex flex-col md:flex-row-reverse items-center justify-between
       bg-gradient-to-br text-white shadow-lg gap-6 md:gap-8 p-6 min-h-[400px]"
-            style={{ fontFamily: "'Roboto'" }}
         >
             <div className="relative md:h-[341px] md:max-w-lg z-10 mb-4 md:mb-0 text-center md:text-left">
                 <h3 className="text-blue-400 font-semibold text-sm">{title}</h3>
