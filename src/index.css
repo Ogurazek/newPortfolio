@@ -106,6 +106,76 @@
   100% { background-position: 0% 50%; }
 }
 
+.animated-text-purple {
+  background: linear-gradient(
+    45deg,
+    #4b6cff,
+    #8b5cf6,
+    #6366f1,
+    #3b82f6,
+    #4b6cff
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.animated-text-green {
+  background: linear-gradient(
+    45deg,
+    #00c6ff,
+    #00ff9d,
+    #06b6d4,
+    #10b981,
+    #00c6ff
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.animated-text-soft {
+  background: linear-gradient(
+    45deg,
+    #003cff,
+    #33ccff,
+    #66e0ff,
+    #b3f0ff,
+    #003cff
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.animated-text-magenta {
+  background: linear-gradient(
+    45deg,
+    #0066ff,
+    #ff4ff8,
+    #7b2ff7,
+    #3f37c9,
+    #0066ff
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+
 .bg-effect {
   background: 
     radial-gradient(

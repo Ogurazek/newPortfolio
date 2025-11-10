@@ -1,10 +1,94 @@
 import { Linkedin, FileUser, Github } from 'lucide-react';
 import { CardTecnology } from './components/cardTecnology';
 import { CardExperiences } from './components/cardExperience';
-import GalaxyHero from './components/galaxyHero';
+import CardStack from './components/card-stack';
 import { FeaturedProject, FeaturedProjectRight } from './components/projects';
 import ContactForm from './components/contact';
 
+const tecnologiesFrontEnd = [
+  {
+    title: "React",
+    urlImage: "React.svg"
+  },
+  {
+    title: "Next.js",
+    urlImage: "nextjs2.svg"
+  },
+  {
+    title: "TypeScript",
+    urlImage: "typescript.svg"
+  },
+  {
+    title: "JavaScript",
+    urlImage: "javascript.svg"
+  },
+  {
+    title: "TailwindCSS",
+    urlImage: "tailwindcss2.svg"
+  },
+  {
+    title: "CSS",
+    urlImage: "css3.svg"
+  },
+  {
+    title: "HTML",
+    urlImage: "html5.svg"
+  },
+]
+const tecnologiesBackend = [
+  {
+    title: "Python",
+    urlImage: "python.svg"
+  },
+  {
+    title: "Django",
+    urlImage: "django.svg"
+  },
+  {
+    title: "MySQL",
+    urlImage: "mysql.svg"
+  },
+  {
+    title: "PostgresSQL",
+    urlImage: "postgresql.svg"
+  },
+]
+const aprendiendo = [
+  {
+    title: "Vue.js",
+    urlImage: "vuejs.svg"
+  },
+  {
+    title: "Supabase",
+    urlImage: "supabase.svg"
+  },
+  {
+    title: "Nuxt.js",
+    urlImage: "nuxtjs.svg"
+  },
+  {
+    title: "Docker",
+    urlImage: "docker.svg"
+  },
+]
+const herramientas = [
+  {
+    title: "VSCode",
+    urlImage: "vscode.svg"
+  },
+  {
+    title: "npm",
+    urlImage: "npm2.svg"
+  },
+  {
+    title: "Git",
+    urlImage: "git.svg"
+  },
+  {
+    title: "Terminal",
+    urlImage: "terminal2.png"
+  },
+]
 
 export default function App() {
   return (
@@ -53,8 +137,7 @@ export default function App() {
           </div>
         </section>
 
-        <div id='experiencia'></div>
-        <section className="w-full min-h-screen flex flex-col gap-6 p-6 md:p-4 lg:p-0">
+        <section id='experiencia' className="w-full min-h-screen flex flex-col justify-center gap-6 p-6 md:p-4 lg:p-0">
           <span className="text-4xl text-start font-bold">Experiencia</span>
           <div className='relative flex w-full h-full flex-col'>
 
@@ -76,15 +159,23 @@ export default function App() {
 
         </section>
 
-        <section id='tecnologias' className="w-full flex flex-col gap-6 scroll-mt-24">
-          <div className='w-full flex justify-center'>
-            <p className='flex text-4xl font-bold text-center'>Tecnologías</p>
+
+
+
+        <section id='tecnologias' className="w-full min-h-screen justify-center flex flex-col gap-6">
+          <span className="text-4xl text-start font-bold">Tecnologías</span>
+          <div className='flex flex-wrap gap-12 justify-center items-center p-4'>
+            <CardStack title='Frontend' tecnologies={tecnologiesFrontEnd} color='animated-text-purple' />
+            <CardStack title='Backend' tecnologies={tecnologiesBackend} color='animated-text-soft' />
+            <CardStack title='Aprendiendo' tecnologies={aprendiendo} color='animated-text-green' />
+            <CardStack title='Herramientas' tecnologies={herramientas} color='animated-text-magenta' />
           </div>
-          <GalaxyHero />
         </section>
 
-        <section className="w-full flex flex-col mt-50 md:gap-20">
-          <span id='proyectos' className="text-4xl text-center">Proyectos</span>
+
+
+        <section className="w-full min-h-screen flex flex-col md:gap-20">
+          <span id='proyectos' className="text-4xl text-start font-bold">Proyectos</span>
           <FeaturedProject title='Freelance' title2='Clidox' description='Clidox es una plataforma de gestión médica que optimiza la experiencia de pacientes, médicos y personal administrativo. Participo en su desarrollo como freelance, implementando mejoras, nuevas funcionalidades y resolviendo problemas técnicos para asegurar un flujo eficiente de turnos y administración de consultas.' imgUrl='/projects/clidox.png'
             urlIcons={[
               { src: "/nextjsss.png", alt: "Next.js" },
@@ -97,7 +188,7 @@ export default function App() {
             <FeaturedProjectRight title='Freelance' title2='Landing Page Karate' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
               urlIcons={[
                 { src: "/nextjsss.png", alt: "Next.js" },
-                { src: "/css.svg", alt: "Tailwind CSS" },
+                { src: "/css3.svg", alt: "CSS" },
                 { src: "/typescript.svg", alt: "TypeScript" },
               ]}
               linkProject='https://page-karate.vercel.app'
@@ -105,7 +196,7 @@ export default function App() {
             <FeaturedProject title='Proyecto Personal' title2='Pasarela de Pago' description='Desarrollé una pasarela de pago segura que permite a los usuarios ingresar y validar datos de tarjetas de crédito, incluyendo número de tarjeta y código de seguridad. Además, integré una API para mostrar dinámicamente el precio de productos en Bitcoin, ofreciendo una experiencia de pago moderna y flexible.' imgUrl='/projects/ProyectoPasarelaPago.webp'
               urlIcons={[
                 { src: "/React.svg", alt: "React" },
-                { src: "/css.svg", alt: "CSS" },
+                { src: "/css3.svg", alt: "CSS" },
               ]}
               linkProject='https://pasarelapago.vercel.app'
             />
@@ -123,6 +214,7 @@ export default function App() {
     </>
   );
 }
+
 
 
 
