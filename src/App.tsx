@@ -108,7 +108,7 @@ export default function App() {
 
             <div>
               <p className="text-base font-medium sm:text-lg">
-                Construyo interfaces rápidas, accesibles y escalables. Me gusta trabajar con buenas prácticas, optimización y un diseño consistente. Siempre busco aportar soluciones claras a problemas reales.
+                Construyo interfaces rápidas, accesibles y escalables. <span className='animated-text-yellow font-bold'>Me gusta trabajar con buenas prácticas, optimización y un diseño consistente.</span> Siempre busco aportar soluciones claras a problemas reales.
               </p>
 
               <div className="w-full flex justify-center gap-6 sm:gap-8 mt-10 flex-wrap">
@@ -162,8 +162,9 @@ export default function App() {
 
 
 
-        <section id='tecnologias' className="w-full min-h-screen justify-center flex flex-col gap-6">
+        <section id='tecnologias' className="w-full min-h-screen justify-center flex flex-col gap-6 scroll-mt-10">
           <span className="text-4xl text-start font-bold">Tecnologías</span>
+          <p>A lo largo de mi <span className='animated-text-yellow font-bold'>recorrido profesional</span> fui incorporando herramientas y tecnologías que hoy <span className='animated-text-yellow font-bold'>forman parte de mi stack principal.</span> Las uso para desarrollar <span className='animated-text-yellow font-bold'>interfaces limpias, escalables y centradas en el usuario.</span></p>
           <div className='flex flex-wrap gap-12 justify-center items-center p-4'>
             <CardStack title='Frontend' tecnologies={tecnologiesFrontEnd} color='animated-text-purple' />
             <CardStack title='Backend' tecnologies={tecnologiesBackend} color='animated-text-soft' />
@@ -174,8 +175,11 @@ export default function App() {
 
 
 
-        <section className="w-full min-h-screen flex flex-col md:gap-20">
-          <span id='proyectos' className="text-4xl text-start font-bold">Proyectos</span>
+        <section className="w-full min-h-screen flex flex-col mt-30 md:gap-20">
+          <div className='flex flex-col gap-6'>
+            <span id='proyectos' className="text-4xl text-start font-bold scroll-mt-20 ">Proyectos</span>
+            <p>Mis proyectos reflejan mi evolución como desarrollador. Desde experimentos técnicos hasta aplicaciones completas donde puse en práctica conceptos de <span className='animated-text-yellow font-bold'>diseño, performance y usabilidad.</span> Cada uno muestra una parte de mi proceso de aprendizaje y consolidación del stack.</p>
+          </div>
           <FeaturedProject title='Freelance' title2='Clidox' description='Clidox es una plataforma de gestión médica que optimiza la experiencia de pacientes, médicos y personal administrativo. Participo en su desarrollo como freelance, implementando mejoras, nuevas funcionalidades y resolviendo problemas técnicos para asegurar un flujo eficiente de turnos y administración de consultas.' imgUrl='/projects/clidox.png'
             urlIcons={[
               { src: "/nextjsss.png", alt: "Next.js" },
