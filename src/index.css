@@ -54,6 +54,27 @@
   background-clip: text;
   color: transparent;
 }
+.animated-text-yellow {
+  background: linear-gradient(
+    45deg,
+    #fff7b3, 
+    #ffd84d,
+    #ffb800, 
+    #ffe066, 
+    #ffffff, 
+    #ffd84d,
+    #ffb800,
+    #fff7b3
+  );
+  background-size: 400% 400%;
+  animation: textGradient 6s ease infinite;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
 
 @keyframes textGradient {
   0% { background-position: 0% 50%; }

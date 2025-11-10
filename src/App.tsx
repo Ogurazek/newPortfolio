@@ -1,9 +1,10 @@
 import { Linkedin, FileUser, Github } from 'lucide-react';
 import { CardTecnology } from './components/cardTecnology';
-import CardExperience from './components/cardExperience';
+import { CardExperiences } from './components/cardExperience';
 import GalaxyHero from './components/galaxyHero';
 import { FeaturedProject, FeaturedProjectRight } from './components/projects';
 import ContactForm from './components/contact';
+
 
 export default function App() {
   return (
@@ -52,45 +53,37 @@ export default function App() {
           </div>
         </section>
 
-
-
-
-
-
-        {/* <section className="w-full flex flex-col mt-30 gap-2 p-6 rounded-lg">
-          <p className='flex text-4xl font-bold'>Sobre mí</p>
-          <p>
-            Soy Desarrollador Front-End con experiencia en React, Next.js, TailwindCSS, TypeScript. Me apasiona construir interfaces modernas, accesibles y centradas en el usuario, siempre cuidando la calidad y la escalabilidad del código.
-
-            Actualmente busco nuevas oportunidades que me permitan seguir creciendo profesionalmente, aportar valor en equipos dinámicos y enfrentar desafíos que potencien mis habilidades como desarrollador.
-
-
-
-          </p>
-        </section> */}
         <div id='experiencia'></div>
-        <section className="w-full flex flex-col mt-50 gap-6 p-6 md:p-4 lg:p-0">
-          <span className="text-4xl text-start">Experiencia Profesional</span>
-          <div className='relative flex w-full h-full flex-col gap-6'>
-            <div className="absolute inset-0 rounded-full 
-                            bg-blue-700 blur-3xl opacity-70 
-                            max-w-[500px] h-[500px] mx-auto"></div>
-            <CardExperience date='04/2025' title='Mentor en el Informatorio Chaco' description='Me desempeño como mentor en un curso de desarrollo de software, donde acompaño a más de 100 estudiantes en su formación en programación. Brindo soporte en tecnologías como Python, Django, Tkinter y MySQL, fomentando tanto el aprendizaje teórico como la práctica.
+        <section className="w-full min-h-screen flex flex-col gap-6 p-6 md:p-4 lg:p-0">
+          <span className="text-4xl text-start font-bold">Experiencia</span>
+          <div className='relative flex w-full h-full flex-col'>
 
-Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desarrollo de sus proyectos, ayudándolos a aplicar lo aprendido en situaciones reales. Mi enfoque está en motivar, inspirar y potenciar las habilidades de cada estudiante para que logren crecer como desarrolladores/as y adquieran confianza en su camino profesional.'/>
-            <CardExperience date='09/2024' title='Desarrollador Frontend en Clidox' description='Durante mi experiencia, participé en el desarrollo y mantenimiento de una plataforma de gestión médica, abordando la implementación de mejoras generales, resolución de errores y creación de nuevas funcionalidades orientadas a optimizar la experiencia de pacientes, médicos, secretarias y administradores. Entre mis tareas principales se incluyeron el desarrollo de módulos de gestión de turnos médicos con ABM desde calendario, edición, arrastrar y eliminación de turnos, así como la gestión de disponibilidad por rangos de fechas. La creación y administración de consultorios, integrando doctores y configurando horarios. La extensión de funcionalidades en perfiles y registros de usuarios. La implementación de landing pages y navegación contextual entre perfiles. La incorporación de mejoras en cuestionarios y gestión de pacientes archivados. El diseño de sidebars personalizados según rol con vistas adaptadas. Optimización de la UI/UX mediante responsive design bajo enfoque mobile first, tooltips, mensajes contextuales y mejoras visuales en listados, cards, y la integración de endpoints para consultorios, doctores y horarios, asegurando la correcta comunicación con la API.' />
+
+            <CardExperiences
+              title='Mentor de Programación'
+              company='Informatorio Chaco'
+              date='04/2025 - Presente'
+              description='Me desempeño como mentor en un curso de desarrollo de software, donde acompaño a más de 100 estudiantes en su formación en programación. Brindo soporte en tecnologías como Python, Django, Tkinter y MySQL, fomentando tanto el aprendizaje teórico como la práctica. Además, doy clases prácticas, resuelvo dudas y guío a los alumnos en el desarrollo de sus proyectos, ayudándolos a aplicar lo aprendido en situaciones reales. Mi enfoque está en motivar, inspirar y potenciar las habilidades de cada estudiante para que logren crecer como desarrolladores/as y adquieran confianza en su camino profesional.'
+            />
+            <CardExperiences
+              title='Desarrollador Frontend'
+              company='Clidox'
+              date='09/2024 - Presente'
+              description='Encargado de desarrollar y mantener una plataforma de gestión médica utilizada por pacientes, médicos, secretarias y administradores, creando nuevas funcionalidades y optimizando flujos clave como la gestión de turnos (creación, edición, arrastre, eliminación y disponibilidad por rangos), la administración de consultorios con asignación de doctores y horarios, y la ampliación de perfiles y permisos según cada rol. También implementé landing pages y navegación contextual, mejoré la UI/UX con un enfoque mobile-first (incluyendo tooltips, mensajes contextuales y mejor visualización de listados), diseñé sidebars personalizados para cada tipo de usuario y aseguré una integración sólida con la API para consultorios, doctores y horarios, garantizando una experiencia fluida y coherente en toda la plataforma.'
+            />
+
           </div>
 
         </section>
 
-        <section id='tecnologias' className="w-full flex flex-col mt-50 gap-6 scroll-mt-24">
+        <section id='tecnologias' className="w-full flex flex-col gap-6 scroll-mt-24">
           <div className='w-full flex justify-center'>
             <p className='flex text-4xl font-bold text-center'>Tecnologías</p>
           </div>
           <GalaxyHero />
         </section>
 
-        <section className="w-full flex flex-col md:gap-20 mt-50">
+        <section className="w-full flex flex-col mt-50 md:gap-20">
           <span id='proyectos' className="text-4xl text-center">Proyectos</span>
           <FeaturedProject title='Freelance' title2='Clidox' description='Clidox es una plataforma de gestión médica que optimiza la experiencia de pacientes, médicos y personal administrativo. Participo en su desarrollo como freelance, implementando mejoras, nuevas funcionalidades y resolviendo problemas técnicos para asegurar un flujo eficiente de turnos y administración de consultas.' imgUrl='/projects/clidox.png'
             urlIcons={[
