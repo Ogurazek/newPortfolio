@@ -15,6 +15,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@theme {
+  --breakpoint-tablet: 940px;
+}
+
 .animated-border {
    background: linear-gradient(
     45deg,

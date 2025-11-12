@@ -55,6 +55,11 @@ export default function Navbar() {
                 </button>
                 <ul className="flex flex-col gap-6 text-white">
                     <li>
+                        <a href="#inicio" onClick={() => setOpen(false)} className="hover:text-blue-400">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
                         <a href="#experiencia" onClick={() => setOpen(false)} className="hover:text-blue-400">
                             Experiencia
                         </a>

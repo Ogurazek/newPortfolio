@@ -162,7 +162,7 @@ export default function App() {
 
 
 
-        <section id='tecnologias' className="w-full min-h-screen justify-center flex flex-col gap-6 scroll-mt-10 p-4 md:p-0 mt-20 md:mt-0">
+        <section id='tecnologias' className="w-full min-h-screen justify-center flex flex-col gap-6 scroll-mt-10 p-6 md:p-4 mt-20 md:mt-0">
           <span className="text-4xl text-start font-bold">Tecnologías</span>
           <p>A lo largo de mi <span className='animated-text-yellow font-bold'>recorrido profesional</span> fui incorporando herramientas y tecnologías que hoy <span className='animated-text-yellow font-bold'>forman parte de mi stack principal.</span> Las uso para desarrollar <span className='animated-text-yellow font-bold'>interfaces limpias, escalables y centradas en el usuario.</span></p>
           <div className='flex flex-wrap gap-12 justify-center items-center p-4'>
@@ -175,23 +175,24 @@ export default function App() {
 
 
 
-        <section className="w-full min-h-screen flex flex-col mt-30 md:gap-20 p-4 md:p-0">
+        <section className="w-full min-h-screen flex flex-col mt-30 md:gap-20 p-6 md:p-4">
           <div className='flex flex-col gap-6'>
             <span id='proyectos' className="text-4xl text-start font-bold scroll-mt-20 ">Proyectos</span>
             <p>Mis proyectos reflejan mi evolución como desarrollador. Desde experimentos técnicos hasta aplicaciones completas donde puse en práctica conceptos de <span className='animated-text-yellow font-bold'>diseño, performance y usabilidad.</span> Cada uno muestra una parte de mi proceso de aprendizaje y consolidación del stack.</p>
           </div>
-          <FeaturedProject title='Freelance' title2='Clidox' description='Clidox es una plataforma de gestión médica que optimiza la experiencia de pacientes, médicos y personal administrativo. Participo en su desarrollo como freelance, implementando mejoras, nuevas funcionalidades y resolviendo problemas técnicos para asegurar un flujo eficiente de turnos y administración de consultas.' imgUrl='/projects/clidox.png'
+          <FeaturedProject title='Freelance' title2='Clidox' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
             urlIcons={[
               { src: "/nextjsss.png", alt: "Next.js" },
-              { src: "/tailwindcss2.svg", alt: "Tailwind CSS" },
+              { src: "/css3.svg", alt: "CSS" },
               { src: "/typescript.svg", alt: "TypeScript" },
             ]}
-            linkProject='https://clidox.com'
+            linkProject='https://page-karate.vercel.app'
           />
           <div className='"w-full flex flex-col md:gap-20'>
-            <FeaturedProjectRight title='Freelance' title2='Landing Page Karate' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
+            <FeaturedProjectRight title='Proyecto Personal' title2='Clon YT Music' description='Desarrollé una aplicación web clon de YouTube Music, utilizando React, TypeScript. La interfaz fue construida con CSS Modules, logrando un diseño limpio y moderno.
+La aplicación se conecta a una API de Podcasts, desde la cual obtiene y reproduce los audios en tiempo real, permitiendo al usuario explorar, reproducir y controlar la reproducción de manera fluida.' imgUrl='/projects/proyecto3.png'
               urlIcons={[
-                { src: "/nextjsss.png", alt: "Next.js" },
+                { src: "/React.svg", alt: "React.js" },
                 { src: "/css3.svg", alt: "CSS" },
                 { src: "/typescript.svg", alt: "TypeScript" },
               ]}
@@ -201,6 +202,7 @@ export default function App() {
               urlIcons={[
                 { src: "/React.svg", alt: "React" },
                 { src: "/css3.svg", alt: "CSS" },
+                { src: "/typescript.svg", alt: "TypeScript" },
               ]}
               linkProject='https://pasarelapago.vercel.app'
             />
