@@ -180,7 +180,7 @@ export default function App() {
             <span id='proyectos' className="text-4xl text-start font-bold scroll-mt-20 ">Proyectos</span>
             <p>Mis proyectos reflejan mi evolución como desarrollador. Desde experimentos técnicos hasta aplicaciones completas donde puse en práctica conceptos de <span className='animated-text-yellow font-bold'>diseño, performance y usabilidad.</span> Cada uno muestra una parte de mi proceso de aprendizaje y consolidación del stack.</p>
           </div>
-          <FeaturedProject title='Freelance' title2='Clidox' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
+          <FeaturedProject title='Freelance' title2='Dojo de Karate' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
             urlIcons={[
               { src: "/nextjs2.svg", alt: "Next.js" },
               { src: "/css3.svg", alt: "CSS" },
