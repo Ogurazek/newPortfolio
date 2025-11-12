@@ -182,7 +182,7 @@ export default function App() {
           </div>
           <FeaturedProject title='Freelance' title2='Clidox' description='Desarrollé de manera freelance un sitio web informativo para un dojo de Karate, ofreciendo detalles sobre el dojo, inscripciones, torneos y actividades. El proyecto está construido con Next.js, y me encargué de diseñar y desarrollar la experiencia completa del sitio, asegurando una navegación clara y moderna para los usuarios.' imgUrl='/projects/proyectoKarate.webp'
             urlIcons={[
-              { src: "/nextjsss.png", alt: "Next.js" },
+              { src: "/nextjs2.svg", alt: "Next.js" },
               { src: "/css3.svg", alt: "CSS" },
               { src: "/typescript.svg", alt: "TypeScript" },
             ]}
