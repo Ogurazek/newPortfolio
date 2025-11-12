@@ -196,7 +196,7 @@ La aplicación se conecta a una API de Podcasts, desde la cual obtiene y reprodu
                 { src: "/css3.svg", alt: "CSS" },
                 { src: "/typescript.svg", alt: "TypeScript" },
               ]}
-              linkProject='https://page-karate.vercel.app'
+              linkProject='https://podcast-player-ytmusic.vercel.app'
             />
             <FeaturedProject title='Proyecto Personal' title2='Pasarela de Pago' description='Desarrollé una pasarela de pago segura que permite a los usuarios ingresar y validar datos de tarjetas de crédito, incluyendo número de tarjeta y código de seguridad. Además, integré una API para mostrar dinámicamente el precio de productos en Bitcoin, ofreciendo una experiencia de pago moderna y flexible.' imgUrl='/projects/ProyectoPasarelaPago.webp'
               urlIcons={[
