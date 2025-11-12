@@ -1,3 +1,5 @@
+import { MoveRight } from "lucide-react"
+
 type Icon = {
     src: string;
     alt: string;
@@ -35,9 +37,21 @@ export function FeaturedProject({ title, title2, description, imgUrl, urlIcons, 
 
             <div
                 className="relative md:w-[600px] h-[341px] rounded-xl overflow-hidden shadow-lg
-        transform transition-transform duration-300 hover:translate-y-[-5px] hover:scale-105 hover:rotate-1"
+  transform transition-transform duration-300 hover:translate-y-[-5px] hover:scale-105 hover:rotate-1 group"
             >
-                <img src={imgUrl} alt="Project preview" className="w-full h-full object-cover" />
+                <a href={linkProject} target="_blank" rel="noopener noreferrer">
+                    <img
+                        src={imgUrl}
+                        alt="Project preview"
+                        className="w-full h-full object-cover"
+                    />
+                    <div
+                        className="absolute top-3 right-3 bg-black/60 text-white text-xs px-3 py-1 rounded-md opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1"
+                    >
+                        Ver proyecto
+                        <MoveRight size={12} />
+                    </div>
+                </a>
             </div>
 
             <div
@@ -45,7 +59,7 @@ export function FeaturedProject({ title, title2, description, imgUrl, urlIcons, 
         p-4 md:p-6 rounded-xl text-white bg-gradient-to-r from-blue-800/20 to-blue-900/60
         backdrop-blur-md shadow-lg z-20 mt-4 md:mt-0 will-change-transform"
             >
-                <p className="text-sm md:text-base leading-relaxed">{description}<a className="ml-2 underline font-semibold" target="_blank" href={linkProject}>Visitar</a></p>
+                <p className="text-sm md:text-base leading-relaxed">{description}</p>
             </div>
         </div>
     );
@@ -74,9 +88,21 @@ export function FeaturedProjectRight({ title, title2, description, imgUrl, urlIc
 
             <div
                 className="relative md:w-[600px] h-[341px] rounded-xl overflow-hidden shadow-lg
-        transform transition-transform duration-300 hover:translate-y-[-5px] hover:scale-105 hover:rotate-1"
+  transform transition-transform duration-300 hover:translate-y-[-5px] hover:scale-105 hover:-rotate-1 group"
             >
-                <img src={imgUrl} alt="Project preview" className="w-full h-full object-cover" />
+                <a href={linkProject} target="_blank" rel="noopener noreferrer">
+                    <img
+                        src={imgUrl}
+                        alt="Project preview"
+                        className="w-full h-full object-cover"
+                    />
+                    <div
+                        className="absolute top-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-md opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1"
+                    >
+                        Ver proyecto
+                        <MoveRight size={12} />
+                    </div>
+                </a>
             </div>
 
             <div
@@ -84,7 +110,7 @@ export function FeaturedProjectRight({ title, title2, description, imgUrl, urlIc
         p-4 md:p-6 rounded-xl text-white bg-gradient-to-r from-blue-800/20 to-blue-900/60
         backdrop-blur-md shadow-lg z-20 mt-4 md:mt-0 will-change-transform"
             >
-                <p className="text-sm md:text-base leading-relaxed">{description}<a className="ml-2 underline font-semibold" target="_blank" href={linkProject}>Visitar</a></p>
+                <p className="text-sm md:text-base leading-relaxed">{description}</p>
             </div>
         </div>
     );
